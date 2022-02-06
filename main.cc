@@ -25,8 +25,10 @@ int main(int argc, char *argv[]) {
   cv::addWeighted(color, alpha, roi, 1.0 - alpha, 0.0, roi);
   cv::namedWindow("Display Image", cv::WINDOW_AUTOSIZE);
   cv::imshow("Display Image", image);
+  console->info("cv wait key");
   cv::waitKey(0);
-  return 0;
+  console->info("app.exec");
+  return a.exec();
 
   // return a.exec();
 }
